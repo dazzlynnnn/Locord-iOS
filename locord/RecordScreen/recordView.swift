@@ -1,5 +1,5 @@
 //
-//  recordCreateView.swift
+//  recordView.swift
 //  locord
 //
 //  Created by 이해린 on 2021/02/17.
@@ -8,7 +8,7 @@
 import UIKit
 import EmojiPicker
 
-class recordCreateView: UIViewController {
+class recordView: UIViewController {
 
     @IBOutlet weak var dateField : DateTextfield!
     @IBOutlet weak var image: UIImageView!
@@ -85,7 +85,7 @@ class recordCreateView: UIViewController {
 }
 
 //이미지 extension
-extension recordCreateView : UIImagePickerControllerDelegate & UINavigationControllerDelegate{
+extension recordView : UIImagePickerControllerDelegate & UINavigationControllerDelegate{
     //image를 위한 delegate 추가
     //사진 선택이 끝나고 실행될 메서드
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -97,7 +97,7 @@ extension recordCreateView : UIImagePickerControllerDelegate & UINavigationContr
     }
 }
 
-extension recordCreateView : EmojiPickerViewControllerDelegate{
+extension recordView : EmojiPickerViewControllerDelegate{
     func emojiPickerViewController(_ controller: EmojiPickerViewController, didSelect emoji: String){
         emojiButton.setTitle(emoji, for: .normal)
     }

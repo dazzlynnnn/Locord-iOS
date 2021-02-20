@@ -9,14 +9,17 @@
 /* Begin PBXBuildFile section */
 		0A33B22C25C94A0300394E32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33B22B25C94A0300394E32 /* AppDelegate.swift */; };
 		0A33B22E25C94A0300394E32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33B22D25C94A0300394E32 /* SceneDelegate.swift */; };
-		0A33B23025C94A0300394E32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33B22F25C94A0300394E32 /* ViewController.swift */; };
 		0A33B23325C94A0300394E32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A33B23125C94A0300394E32 /* Main.storyboard */; };
 		0A33B23525C94A0600394E32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A33B23425C94A0600394E32 /* Assets.xcassets */; };
 		0A33B23825C94A0600394E32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A33B23625C94A0600394E32 /* LaunchScreen.storyboard */; };
-		0A7322AE25DD440C004B1389 /* recordCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7322AD25DD440C004B1389 /* recordCreateView.swift */; };
+		0A7322AE25DD440C004B1389 /* recordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7322AD25DD440C004B1389 /* recordView.swift */; };
 		0A7322B225DD45DF004B1389 /* dateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7322B125DD45DF004B1389 /* dateTextField.swift */; };
 		0A7B20E925D29EC2008A57A4 /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B20E825D29EC2008A57A4 /* loginView.swift */; };
 		0A7B20EC25D2BCAC008A57A4 /* joinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B20EB25D2BCAC008A57A4 /* joinView.swift */; };
+		0AA4D0AE25E0C5C200C8DE51 /* mapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4D0AD25E0C5C200C8DE51 /* mapView.swift */; };
+		0AA4D0BA25E0CC3100C8DE51 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4D0B925E0CC3100C8DE51 /* Map.storyboard */; };
+		0AA4D0BF25E0CCEE00C8DE51 /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4D0BE25E0CCEE00C8DE51 /* Record.storyboard */; };
+		0AA4D0C325E0D1AA00C8DE51 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4D0C225E0D1AA00C8DE51 /* UserModel.swift */; };
 		27C561B659DAEF267645D97F /* Pods_locord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2B7C6247F556149B56570E /* Pods_locord.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,15 +27,18 @@
 		0A33B22825C94A0300394E32 /* locord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A33B22B25C94A0300394E32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A33B22D25C94A0300394E32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0A33B22F25C94A0300394E32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A33B23225C94A0300394E32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A33B23425C94A0600394E32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A33B23725C94A0600394E32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A33B23925C94A0600394E32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A7322AD25DD440C004B1389 /* recordCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = recordCreateView.swift; path = ../recordCreateView.swift; sourceTree = "<group>"; };
+		0A7322AD25DD440C004B1389 /* recordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recordView.swift; sourceTree = "<group>"; };
 		0A7322B125DD45DF004B1389 /* dateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateTextField.swift; sourceTree = "<group>"; };
 		0A7B20E825D29EC2008A57A4 /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
 		0A7B20EB25D2BCAC008A57A4 /* joinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joinView.swift; sourceTree = "<group>"; };
+		0AA4D0AD25E0C5C200C8DE51 /* mapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapView.swift; sourceTree = "<group>"; };
+		0AA4D0B925E0CC3100C8DE51 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		0AA4D0BE25E0CCEE00C8DE51 /* Record.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
+		0AA4D0C225E0D1AA00C8DE51 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2F0F7AAC664ED7F2A4FA90FE /* Pods-locord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locord.release.xcconfig"; path = "Target Support Files/Pods-locord/Pods-locord.release.xcconfig"; sourceTree = "<group>"; };
 		ED2B7C6247F556149B56570E /* Pods_locord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_locord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9927F817AB24E489ADF804 /* Pods-locord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locord.debug.xcconfig"; path = "Target Support Files/Pods-locord/Pods-locord.debug.xcconfig"; sourceTree = "<group>"; };
@@ -53,6 +59,11 @@
 		0A33B21F25C94A0300394E32 = {
 			isa = PBXGroup;
 			children = (
+				0AA4D0B025E0C5CE00C8DE51 /* LaunchScreen */,
+				0AA4D0B225E0C60A00C8DE51 /* MainScreen */,
+				0AA4D0B425E0C67000C8DE51 /* MapScreen */,
+				0AA4D0B525E0C6C300C8DE51 /* LocationScreen */,
+				0AA4D0B625E0C6F800C8DE51 /* RecordScreen */,
 				0A33B22A25C94A0300394E32 /* locord */,
 				0A33B22925C94A0300394E32 /* Products */,
 				6C4E9D0B59C4D4635388581F /* Pods */,
@@ -71,19 +82,57 @@
 		0A33B22A25C94A0300394E32 /* locord */ = {
 			isa = PBXGroup;
 			children = (
-				0A7322AD25DD440C004B1389 /* recordCreateView.swift */,
 				0A33B22B25C94A0300394E32 /* AppDelegate.swift */,
 				0A33B22D25C94A0300394E32 /* SceneDelegate.swift */,
-				0A33B22F25C94A0300394E32 /* ViewController.swift */,
-				0A33B23125C94A0300394E32 /* Main.storyboard */,
-				0A7322B125DD45DF004B1389 /* dateTextField.swift */,
-				0A7B20E825D29EC2008A57A4 /* loginView.swift */,
 				0A33B23425C94A0600394E32 /* Assets.xcassets */,
-				0A33B23625C94A0600394E32 /* LaunchScreen.storyboard */,
 				0A33B23925C94A0600394E32 /* Info.plist */,
-				0A7B20EB25D2BCAC008A57A4 /* joinView.swift */,
 			);
 			path = locord;
+			sourceTree = "<group>";
+		};
+		0AA4D0B025E0C5CE00C8DE51 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0A33B23625C94A0600394E32 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		0AA4D0B225E0C60A00C8DE51 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0A7B20E825D29EC2008A57A4 /* loginView.swift */,
+				0A7B20EB25D2BCAC008A57A4 /* joinView.swift */,
+				0A33B23125C94A0300394E32 /* Main.storyboard */,
+				0AA4D0C225E0D1AA00C8DE51 /* UserModel.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		0AA4D0B425E0C67000C8DE51 /* MapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0AA4D0B925E0CC3100C8DE51 /* Map.storyboard */,
+				0AA4D0AD25E0C5C200C8DE51 /* mapView.swift */,
+			);
+			path = MapScreen;
+			sourceTree = "<group>";
+		};
+		0AA4D0B525E0C6C300C8DE51 /* LocationScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocationScreen;
+			sourceTree = "<group>";
+		};
+		0AA4D0B625E0C6F800C8DE51 /* RecordScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0A7322AD25DD440C004B1389 /* recordView.swift */,
+				0A7322B125DD45DF004B1389 /* dateTextField.swift */,
+				0AA4D0BE25E0CCEE00C8DE51 /* Record.storyboard */,
+			);
+			path = RecordScreen;
 			sourceTree = "<group>";
 		};
 		2379473FA9A0C94E37FFEBDF /* Frameworks */ = {
@@ -165,6 +214,8 @@
 				0A33B23825C94A0600394E32 /* LaunchScreen.storyboard in Resources */,
 				0A33B23525C94A0600394E32 /* Assets.xcassets in Resources */,
 				0A33B23325C94A0300394E32 /* Main.storyboard in Resources */,
+				0AA4D0BA25E0CC3100C8DE51 /* Map.storyboard in Resources */,
+				0AA4D0BF25E0CCEE00C8DE51 /* Record.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,12 +268,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A33B23025C94A0300394E32 /* ViewController.swift in Sources */,
+				0AA4D0AE25E0C5C200C8DE51 /* mapView.swift in Sources */,
 				0A33B22C25C94A0300394E32 /* AppDelegate.swift in Sources */,
 				0A7B20E925D29EC2008A57A4 /* loginView.swift in Sources */,
 				0A7322B225DD45DF004B1389 /* dateTextField.swift in Sources */,
-				0A7322AE25DD440C004B1389 /* recordCreateView.swift in Sources */,
+				0A7322AE25DD440C004B1389 /* recordView.swift in Sources */,
 				0A7B20EC25D2BCAC008A57A4 /* joinView.swift in Sources */,
+				0AA4D0C325E0D1AA00C8DE51 /* UserModel.swift in Sources */,
 				0A33B22E25C94A0300394E32 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

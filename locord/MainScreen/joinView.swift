@@ -9,7 +9,7 @@ import UIKit
 
 class joinView: UIViewController {
     
-    var userModel = UserModel() //Model의 인스턴스 생성
+    var userModel = UserModel() // 인스턴스 생성
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -27,8 +27,6 @@ class joinView: UIViewController {
         }
         return false
     }
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,20 +47,7 @@ class joinView: UIViewController {
         guard let password = passwordTextField.text, !password.isEmpty else { return }
         guard let passwordConfirm = passwordConfirmTextField.text, !passwordConfirm.isEmpty else { return }
 
-        // TextField 흔들기 애니메이션
-        func shakeTextField(textField: UITextField) -> Void{
-            UIView.animate(withDuration: 0.2, animations: {
-                textField.frame.origin.x -= 10
-            }, completion: { _ in
-                UIView.animate(withDuration: 0.2, animations: {
-                    textField.frame.origin.x += 20
-                }, completion: { _ in
-                    UIView.animate(withDuration: 0.2, animations: {
-                        textField.frame.origin.x -= 10
-                    })
-                })
-            })
-        }
+        
         if userModel.isValidEmail(id: email){
             if let removable = self.view.viewWithTag(100) {
                 removable.removeFromSuperview()
@@ -109,8 +94,8 @@ class joinView: UIViewController {
         }
         
         if userModel.isValidEmail(id: email) && userModel.isValidPassword(pwd: password) && password == passwordConfirm {
-            let loginSuccess: Bool = isUser(id: email)
-            if loginSuccess {
+            let joinFail: Bool = isUser(id: email)
+            if joinFail {
                 print("이메일 중복")
                 shakeTextField(textField: emailTextField)
                 let joinFailLabel = UILabel(frame: CGRect(x: 68, y: 510, width: 279, height: 45))
@@ -125,13 +110,28 @@ class joinView: UIViewController {
                 if let removable = self.view.viewWithTag(103) {
                     removable.removeFromSuperview()
                 }
-                self.performSegue(withIdentifier: "showMain", sender: self)
+                self.performSegue(withIdentifier: "showMap", sender: self)
             }
         }
         
 
     }
 
+    // TextField 흔들기 애니메이션
+    func shakeTextField(textField: UITextField) -> Void{
+        UIView.animate(withDuration: 0.2, animations: {
+            textField.frame.origin.x -= 10
+        }, completion: { _ in
+            UIView.animate(withDuration: 0.2, animations: {
+                textField.frame.origin.x += 20
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.2, animations: {
+                    textField.frame.origin.x -= 10
+                })
+            })
+        })
+    }
+    
     // 다음 누르면 입력창 넘어가기, 완료 누르면 키보드 내려가기
     @objc func didEndOnExit(_ sender: UITextField) {
         if nameTextField.isFirstResponder {

@@ -6,35 +6,6 @@
 //
 
 import UIKit
-import KakaoSDKAuth
-import KakaoSDKUser
-
-final class UserModel {
-    struct User {
-        var email: String
-        var password: String
-    }
-    
-    var users: [User] = [
-        User(email: "lhr519@naver.com", password: "qwerty1234"),
-        User(email: "dazzlynnnn@gmail.com", password: "asdfasdf5678")
-    ]
-    
-    // 아이디 형식 검사
-    func isValidEmail(id: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: id)
-    }
-    
-    // 비밀번호 형식 검사
-    func isValidPassword(pwd: String) -> Bool {
-        let passwordRegEx = "^[a-zA-Z0-9]{8,}$"
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
-        return passwordTest.evaluate(with: pwd)
-    }
-} // end of UserModel
-
 
 class loginView: UIViewController {
 
@@ -43,7 +14,6 @@ class loginView: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-   
     
     // 로그인 method
     func loginCheck(id: String, pwd: String) -> Bool {
@@ -109,7 +79,7 @@ class loginView: UIViewController {
                 if let removable = self.view.viewWithTag(102) {
                     removable.removeFromSuperview()
                 }
-                self.performSegue(withIdentifier: "showMain", sender: self)
+                self.performSegue(withIdentifier: "showMap", sender: self)
             }
             else {
                 print("로그인 실패")
@@ -148,42 +118,11 @@ class loginView: UIViewController {
             passwordTextField.becomeFirstResponder()
         }
     }
-
     
-    // 카카오 로그인
     @IBAction func kakaoLogin(_ sender: Any) {
-//        if (AuthApi.isKakaoTalkLoginAvailable()) {
-//            AuthApi.shared.loginWithKakaoTalk {(oauthToken, error) in
-//                if let error = error {
-//                    print(error)
-//                }
-//                else {
-//                    print("loginWithKakaoTalk() success.")
-//
-//                    //do something
-//
-//                    UserApi.shared.me() {(user, error) in
-//                        if let error = error {
-//                            print(error)
-//                        }
-//                        else {
-//                            print("me() success.")
-//
-//                            //do something
-//                            _ = user
-//                        }
-//                    }
-//
-//                    _ = oauthToken
-//                }
-//            }
-//        }
-        
-        //사파리로 링크열기
         if let url = URL(string: "https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=582d94458100da17890f0de665515131&redirect_uri=http://9bd2cc92bbd0.ngrok.io/user/login/kakao") {
             UIApplication.shared.open(url, options: [:])
         }
-
     }
     
     @IBAction func googleLogin(_ sender: Any) {

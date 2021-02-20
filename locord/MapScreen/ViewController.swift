@@ -10,7 +10,6 @@ import NMapsMap
 class ViewController: UIViewController {
     
     
-    @IBOutlet weak var mapView: NMFMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
         let x = view.center.x - 190

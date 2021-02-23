@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Foundation
+import Alamofire
+import SwiftyJSON
 
 class loginView: UIViewController {
 
@@ -42,6 +45,22 @@ class loginView: UIViewController {
         guard let email = emailTextField.text, !email.isEmpty else { return }
         guard let password = passwordTextField.text, !password.isEmpty else { return }
         
+        func post() {
+            struct Login: Encodable {
+                let email: String
+                let password: String
+            }
+
+            let login = Login(email: "test@gmail.com", password: "password")
+
+            AF.request("https://b0dcd17f1cdf.ngrok.io/user/login",
+                       method: .post,
+                       parameters: login,
+                       encoder: JSONParameterEncoder.default).response { response in
+                debugPrint(response)
+            }
+        }
+        
         if userModel.isValidEmail(id: email){
             if let removable = self.view.viewWithTag(100) {
                 removable.removeFromSuperview()
@@ -75,7 +94,9 @@ class loginView: UIViewController {
         if userModel.isValidEmail(id: email) && userModel.isValidPassword(pwd: password) {
             let loginSuccess: Bool = loginCheck(id: email, pwd: password)
             if loginSuccess {
+                post()
                 print("로그인 성공")
+                post()
                 if let removable = self.view.viewWithTag(102) {
                     removable.removeFromSuperview()
                 }

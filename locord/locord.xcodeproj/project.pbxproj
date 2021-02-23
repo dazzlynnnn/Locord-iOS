@@ -16,7 +16,7 @@
 		0A7322B225DD45DF004B1389 /* dateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7322B125DD45DF004B1389 /* dateTextField.swift */; };
 		0A7B20E925D29EC2008A57A4 /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B20E825D29EC2008A57A4 /* loginView.swift */; };
 		0A7B20EC25D2BCAC008A57A4 /* joinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B20EB25D2BCAC008A57A4 /* joinView.swift */; };
-		0AA4D0AE25E0C5C200C8DE51 /* mapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4D0AD25E0C5C200C8DE51 /* mapView.swift */; };
+		0A84C14025E5698A00329291 /* mapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A84C13F25E5698A00329291 /* mapView.swift */; };
 		0AA4D0BA25E0CC3100C8DE51 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4D0B925E0CC3100C8DE51 /* Map.storyboard */; };
 		0AA4D0BF25E0CCEE00C8DE51 /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA4D0BE25E0CCEE00C8DE51 /* Record.storyboard */; };
 		0AA4D0C325E0D1AA00C8DE51 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4D0C225E0D1AA00C8DE51 /* UserModel.swift */; };
@@ -35,7 +35,7 @@
 		0A7322B125DD45DF004B1389 /* dateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateTextField.swift; sourceTree = "<group>"; };
 		0A7B20E825D29EC2008A57A4 /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
 		0A7B20EB25D2BCAC008A57A4 /* joinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joinView.swift; sourceTree = "<group>"; };
-		0AA4D0AD25E0C5C200C8DE51 /* mapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapView.swift; sourceTree = "<group>"; };
+		0A84C13F25E5698A00329291 /* mapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapView.swift; sourceTree = "<group>"; };
 		0AA4D0B925E0CC3100C8DE51 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		0AA4D0BE25E0CCEE00C8DE51 /* Record.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
 		0AA4D0C225E0D1AA00C8DE51 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				0AA4D0B925E0CC3100C8DE51 /* Map.storyboard */,
-				0AA4D0AD25E0C5C200C8DE51 /* mapView.swift */,
+				0A84C13F25E5698A00329291 /* mapView.swift */,
 			);
 			path = MapScreen;
 			sourceTree = "<group>";
@@ -268,8 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AA4D0AE25E0C5C200C8DE51 /* mapView.swift in Sources */,
 				0A33B22C25C94A0300394E32 /* AppDelegate.swift in Sources */,
+				0A84C14025E5698A00329291 /* mapView.swift in Sources */,
 				0A7B20E925D29EC2008A57A4 /* loginView.swift in Sources */,
 				0A7322B225DD45DF004B1389 /* dateTextField.swift in Sources */,
 				0A7322AE25DD440C004B1389 /* recordView.swift in Sources */,

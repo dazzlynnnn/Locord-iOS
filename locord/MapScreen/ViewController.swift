@@ -1,38 +1,42 @@
-//
-//  ViewController.swift
-//  locord
-//
-//  Created by 이해린 on 2021/02/02.
-//
-
 import UIKit
 import NMapsMap
-class ViewController: UIViewController {
+class mapView: UIViewController {
     
+    @IBOutlet weak var searchTextField: UISearchBar!
+    @IBOutlet weak var title: UITextView!
+    let jsconDecoder: JSONDecoder = JSONDecoder()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let x = view.center.x - 190
-        let y = view.center.y - 190
-
-        let frame = CGRect(x:x, y:y, width:380, height:380)
-
-        let mapView = NMFMapView(frame: frame)
-        let mapNaverView = NMFNaverMapView(frame: frame)
-
-        view.addSubview(mapView)
-            mapNaverView.showZoomControls = true
-            mapNaverView.showLocationButton = true
-            mapView.isScrollGestureEnabled = true
-            mapView.isZoomGestureEnabled = true
-            mapView.isTiltGestureEnabled = true
-            mapView.isRotateGestureEnabled = true
-            mapView.isStopGestureEnabled = true
-
-        let marker = NMFMarker()
-            marker.position = NMGLatLng(lat: 37.35931678547832, lng: 127.10479474661922)
+    class mapView: UIViewController {
             marker.mapView = mapView
         
     }
+    
+    @IBAction func touchUpSearchUpButton(_ sender: Any) {
+        let queryValue: String = searchTextField.text!
+        requestAPIToNaver(queryValue: queryValue)
+    }
+    
+    
+    func requestAPIToNaver(queryValue: String) {
+        let clientID: String = "U1IE2a8BVA8xAE8f5dLI"
+        let clientKEY: String = "QPiEaHzD_x"
+        
+        let query: String  = "https://openapi.naver.com/v1/search/local.json?query=\(queryValue)"
+        let encodedQuery: String = query.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+        let queryURL: URL = URL(string: encodedQuery)!
+        
+        var requestURL = URLRequest(url: queryURL)
+                requestURL.addValue(clientID, forHTTPHeaderField: "X-Naver-Client-Id")
+                requestURL.addValue(clientKEY, forHTTPHeaderField: "X-Naver-Client-Secret")
+                
+        URLResponse
+    }
 }
+
+
+    
+    
 

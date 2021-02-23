@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Foundation
+import Alamofire
+import SwiftyJSON
 
 class joinView: UIViewController {
     
@@ -47,6 +50,22 @@ class joinView: UIViewController {
         guard let password = passwordTextField.text, !password.isEmpty else { return }
         guard let passwordConfirm = passwordConfirmTextField.text, !passwordConfirm.isEmpty else { return }
 
+        func post() {
+            struct Join: Encodable {
+                let nickname: String
+                let email: String
+                let password: String
+            }
+
+            let join = Join(nickname: name, email: email, password: password)
+
+            AF.request("https://b0dcd17f1cdf.ngrok.io/user/signup",
+                       method: .post,
+                       parameters: join,
+                       encoder: JSONParameterEncoder.default).response { response in
+                debugPrint(response)
+            }
+        }
         
         if userModel.isValidEmail(id: email){
             if let removable = self.view.viewWithTag(100) {
@@ -106,6 +125,7 @@ class joinView: UIViewController {
                 self.view.addSubview(joinFailLabel)
             }
             else {
+                post()
                 print("가입 성공")
                 if let removable = self.view.viewWithTag(103) {
                     removable.removeFromSuperview()

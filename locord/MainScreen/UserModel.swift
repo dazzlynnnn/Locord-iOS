@@ -7,6 +7,9 @@
 
 import Foundation
 final class UserModel {
+    
+    var baseURL = "https://40c623720049.ngrok.io"
+    
     struct User {
         var email: String
         var password: String
@@ -15,7 +18,7 @@ final class UserModel {
     var users: [User] = [
         User(email: "lhr519@naver.com", password: "qwerty1234"),
         User(email: "dazzlynnnn@gmail.com", password: "asdfasdf5678"),
-        User(email: "test@gmail.com", password: "password")
+        User(email: "ayo@ayo.com", password: "qwerty1234")
     ]
     
     // 아이디 형식 검사

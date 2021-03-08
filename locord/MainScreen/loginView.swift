@@ -51,11 +51,12 @@ class loginView: UIViewController {
                 let password: String
             }
 
-            let login = Login(email: "test@gmail.com", password: "password")
+            let login = Login(email: email, password: password)
 
-            AF.request("https://b0dcd17f1cdf.ngrok.io/user/login",
+            AF.request("https://40c623720049.ngrok.io/user/login",
                        method: .post,
                        parameters: login,
+                       
                        encoder: JSONParameterEncoder.default).response { response in
                 debugPrint(response)
             }
@@ -141,8 +142,14 @@ class loginView: UIViewController {
     }
     
     @IBAction func kakaoLogin(_ sender: Any) {
-        if let url = URL(string: "https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=582d94458100da17890f0de665515131&redirect_uri=http://9bd2cc92bbd0.ngrok.io/user/login/kakao") {
+        if let url = URL(string: "https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=582d94458100da17890f0de665515131&redirect_uri=https://40c623720049.ngrok.io/user/login/kakao"){
             UIApplication.shared.open(url, options: [:])
+//            AF.request("https://40c623720049.ngrok.io/user/login/kakao",
+//                       method: .get,
+//                       parameters: "Content-Type : application/json",
+//                       encoder: JSONParameterEncoder.default).response { response in
+//                debugPrint(response)
+//            }
         }
     }
     

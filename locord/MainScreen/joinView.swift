@@ -59,11 +59,15 @@ class joinView: UIViewController {
 
             let join = Join(nickname: name, email: email, password: password)
 
-            AF.request("https://b0dcd17f1cdf.ngrok.io/user/signup",
+            AF.request("https://40c623720049.ngrok.io/user/signup",
                        method: .post,
                        parameters: join,
                        encoder: JSONParameterEncoder.default).response { response in
-                debugPrint(response)
+                        let json = JSON(response.result)
+                        print(json)
+                        
+//                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                        appDelegate.user = response
             }
         }
         

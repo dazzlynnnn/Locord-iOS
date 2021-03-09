@@ -76,6 +76,14 @@
                                     <action selector="kakaoLogin:" destination="BqE-f5-foD" eventType="touchUpInside" id="aWB-zs-SJH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5H0-8q-XyN">
+                                <rect key="frame" x="191" y="689" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="pass"/>
+                                <connections>
+                                    <segue destination="RRf-vH-mZX" kind="show" id="ybU-GA-nKx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nPs-QI-vUN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -156,7 +164,9 @@
         <!--Map-->
         <scene sceneID="4o4-hS-Dc3">
             <objects>
-                <viewControllerPlaceholder storyboardName="Map" referencedIdentifier="Map" id="RRf-vH-mZX" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Map" referencedIdentifier="Map" id="RRf-vH-mZX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Yg0-MF-WIr"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsZ-7Z-XtY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1042" y="392"/>

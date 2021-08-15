@@ -68,9 +68,13 @@ class mapView: UIViewController {
                    method: .get,
                    parameters: nil,
                    encoding: URLEncoding.default,
-                   headers: headers).responseData{ response in
-                    
-                        debugPrint(response)
-                   }
-}
+                   headers: headers).responseData() { (data) in
+                    let json = try! JSON(data: data.data!)
+                    let mapx = json["items"][0]["mapx"]
+                    let mapy = json["items"][0]["mapy"]
+
+//                    let utmk = NMGUtmk(x: mx, y: my)
+//                    let latLng = utmk.toLatLng()
+                    }
+    }
 }
